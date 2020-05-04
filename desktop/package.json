@@ -1,0 +1,29 @@
+{
+  "version": "1.4.0-beta2",
+  "author": "rise.vision",
+  "engines": {
+    "yarn": "^1.10.1"
+  },
+  "main": "src/main.js",
+  "license": "GPL-3.0-only",
+  "dependencies": {
+    "carlo": "^0.9.43"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "rm -rf build; cp -Rf ../dist/build build; tsc",
+    "release": "yarn prepare && yarn build && pkg . --out-path=dist",
+    "start": "yarn set-env testnet; yarn prepare; node src/main.js"
+  },
+  "devDependencies": {
+    "pkg": "^4.4.0",
+    "typescript": "^3.2.2"
+  },
+  "bin": {
+    "rise-wallet": "./src/main.js"
+  },
+  "pkg": {
+    "scripts": "src/**/*.js",
+    "assets": "build/**/*"
+  }
+}

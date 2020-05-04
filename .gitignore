@@ -1,0 +1,49 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# electron
+desktop/node_modules
+desktop/build
+desktop/dist
+desktop/*.tgz
+desktop/src/**/*.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# translations
+/tmp
+/src/translations/locales/en.json
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.tern-port
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.idea
+/notes.md
+
+/cypress/fixtures/accounts.json
+/cypress/archive
+/cypress/examples
+/cypress/screenshots
+/cypress/videos
+
+/sync
+/.cache
+/now.json
+
+.browserslistrc
+
